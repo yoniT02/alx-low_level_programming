@@ -10,10 +10,11 @@ int main(void)
 {
 	char n = 'a';
 	char n2 = 'A';
+	int i;
 
-	for (int i = 0; i < 26; i++, n++)
+	for (i = 0; i < 26; i++, n++)
 		putchar(n);
-	for (int i = 0; i < 26; i++, n2++)
+	for (i = 0; i < 26; i++, n2++)
 		putchar(n2);
 	putchar('\n');
 
