@@ -16,13 +16,18 @@ int main(void)
 		for (j = i; j < 58; j++)
 		{
 			if (i == j)
+			{
 				;
-			else 
+			}
+			else
 			{
 				putchar(i);
 				putchar(j);
-				putchar(n);
-				putchar(' ');
+				if (i < 56)
+				{
+					putchar(n);
+					putchar(' ');
+				}
 			}
 		}
 	}
