@@ -9,10 +9,15 @@
 int main(void)
 {
 	char n = 'a';
+	int i = 0;
 
-	for (int i = 0; i < 26; i++, n++)
+	while (i < 26)
+	{
+		i++;
 		putchar(n);
-	putchar('\n');
+		n++
+	}
+	putchar("\n");
 
 	return (0);
 }
