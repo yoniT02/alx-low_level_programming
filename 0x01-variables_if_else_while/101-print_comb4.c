@@ -25,8 +25,8 @@ int main(void)
 				else
 				{
 					putchar(i);
-					putchar(j);
 					putchar(k);
+					putchar(j);
 					if (i < 55)
 					{
 						putchar(n);
