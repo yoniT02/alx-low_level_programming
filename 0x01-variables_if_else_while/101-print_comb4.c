@@ -9,6 +9,7 @@ int main(void)
 {
 	int j;
 	int i;
+	int k;
 	int n = 44;
 
 	for (i = 48; i < 58; i++)
