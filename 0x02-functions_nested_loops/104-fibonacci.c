@@ -5,28 +5,28 @@
  *
  * Return: 0
  */
-int main(void)
+void printFibonacciNumbers(int n)
 {
-	int counter = 2;
+    int f1 = 1, f2 = 2, i;
+    int next;
 
-	float a = 1;
-	float b = a + 1;
-	float c = a + b;
-
-	printf("%.0f, ", a);
-	printf("%.0f, ", b);
-	while (counter < 98)
-	{
-		counter++;
-		printf("%.0f", c);
-		a = b;
-		b = c;
-		c = a + b;
-		if (counter < 98)
+    if (n < 1)
+        return;
+    printf("%d ", f1);
+    printf(", ");
+    for (i = 1; i < n; i++) {
+        printf("%d ", f2);
+	if (i < 97)
 		{
 			printf(", ");
 		}
-	}
-	printf("\n");
+        next = f1 + f2;
+        f1 = f2;
+        f2 = next;
+    }
+}
+int main(void)
+{
+	printFibonacciNumbers(98);
 	return (0);
 }
