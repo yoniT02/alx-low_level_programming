@@ -1,32 +1,42 @@
 #include <stdio.h>
 
-/**
- * main - main function
- *
- * Return: 0
- */
-void printFibonacciNumbers(int n)
-{
-    int f1 = 1, f2 = 2, i;
-    int next;
-
-    if (n < 1)
-        return;
-    printf("%d ", f1);
-    printf(", ");
-    for (i = 1; i < n; i++) {
-        printf("%d ", f2);
-	if (i < 97)
-		{
-			printf(", ");
-		}
-        next = f1 + f2;
-        f1 = f2;
-        f2 = next;
-    }
-}
 int main(void)
 {
-	printFibonacciNumbers(98);
+	int count;
+	unsigned long i, j, k;
+	unsigned long m, n, p, carry;
+
+	count = 0;
+	i = 0;
+	j =  1;
+	for (count = i; count <= 91; count++)
+	{
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu, ", k);
+	}
+	n = i % 1000;
+	i = i / 1000;
+	n = j % 1000;
+	j = j / 1000;
+	while (count <= 98)
+	{
+		carry = (m +n) / 1000;
+		p = (m + n) - carry * 1000;
+		k = (i  + j) + carry;
+		m = n;
+		n = p;
+		i = j;
+		j = k;
+		if (p >= 100)
+			printf("%lu%lu", k, p);
+		else
+			printf("%lu0%lu", k, p);
+		if (count != 98)
+			printf(", ");
+		count++;
+	}
+	putchar('\n');
 	return (0);
 }
