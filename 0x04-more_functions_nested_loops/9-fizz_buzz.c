@@ -18,23 +18,33 @@ int main(void)
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Fizz ");
-			i++;
-				if (i % 5 == 0)
-				{
-					printf("Buzz ");
-					i++;
-				}
+			printf("Fizz");
+			if (i <= 100)
+			{
+				printf(" ");
+				i++;
+					if (i % 5 == 0)
+					{
+						printf("Buzz");
+						printf(" ");
+						i++;
+					}
+			}
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
-			i++;
-				if (i % 3 == 0)
-				{
-					printf("Fizz ");
-					i++;
-				}
+			printf("Buzz");
+			if (i <= 100)
+			{
+				printf(" ");
+				i++;
+					if (i % 3 == 0)
+					{
+						printf("Fizz");
+						printf(" ");
+						i++;
+					}
+			}
 		}
 		if (i <= 100)
 		{
