@@ -20,14 +20,27 @@ int main(void)
 		{
 			printf("Fizz ");
 			i++;
+				if (i % 5 == 0)
+				{
+					printf("Buzz ");
+					i++;
+				}
 		}
 		else if (i % 5 == 0)
 		{
 			printf("Buzz ");
 			i++;
+				if (i % 3 == 0)
+				{
+					printf("Fizz ");
+					i++;
+				}
 		}
-		printf("%d", i);
-		printf(" ");
+		if (i <= 100)
+		{
+			printf("%d", i);
+			printf(" ");
+		}
 	}
 	return (0);
 }
